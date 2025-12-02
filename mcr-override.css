@@ -1,1 +1,371 @@
-/* Mill City Running override CSS */
+/* ============================================
+   Mill City Running – Override Stylesheet
+   ============================================ */
+
+
+/* ============================
+   NAV BAR FONT STYLES
+   ============================ */
+#TheMenu .menu > li > a,
+#TheMenu .menu li ul li a {
+    font-weight: 400 !important;
+}
+
+#TheMenu .menu > li > a:hover,
+#TheMenu .menu > li.current > a {
+    font-weight: 500 !important;
+    text-decoration-thickness: 1.5px !important;
+    text-underline-offset: 4px;
+    text-decoration-color: inherit;
+}
+
+
+/* ============================
+   PRODUCT PAGE BASICS
+   ============================ */
+.product-single .price {
+    color: var(--secondary) !important;
+    font-size: 36px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+@media all and (max-width: 767px) {
+    .logo {
+        max-height: 40px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+
+/* ============================
+   PRODUCT NAME / BRAND STYLING
+   ============================ */
+.product .name {
+    text-transform: unset;
+}
+
+h5.uppercase {
+    text-transform: unset;
+}
+
+.uppercase.productname {
+    text-transform: unset;
+    font-weight: 700;
+}
+
+.uppercase.brand {
+    text-transform: unset;
+}
+
+
+/* ============================
+   HOMEPAGE STYLES
+   ============================ */
+h2.uppercase {
+    text-transform: unset;
+}
+
+
+/* ============================
+   CATEGORY PAGE
+   ============================ */
+#CategoryList .catLink {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.widget .title {
+    text-transform: unset;
+}
+
+h2.bold.mb16 {
+    font-weight: 600 !important;
+    font-size: 56px;
+    line-height: 64px;
+    color: var(--almostblack);
+    padding-bottom: 40px;
+}
+
+
+/* ============================
+   GENERAL RESET
+   ============================ */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* ============================
+   VIDEO / IMAGE HERO
+   ============================ */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: black;
+    line-height: 0;
+}
+
+.video-container .placeholder,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.video-container video {
+    display: none;
+    z-index: 2;
+}
+
+.video-container .placeholder {
+    z-index: 1;
+}
+
+
+/* ============================
+   IN-STORE ONLY LABEL
+   ============================ */
+.instoreonly {
+    display: none !important;
+}
+
+
+/* ============================
+   RELEASE NOTE (PRODUCT PAGE)
+   ============================ */
+.release-note {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b33;
+    line-height: 1.4;
+}
+
+.release-note span {
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+}
+
+
+/* ============================
+   SIZE CHART STYLING
+   ============================ */
+.size-chart-container {
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.size-chart-container h5 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.size-chart-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 80%;
+    min-width: 600px;
+    text-align: center;
+}
+
+.size-chart-table th,
+.size-chart-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    height: 50px;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+    white-space: normal;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.size-chart-table tr:first-of-type th {
+    font-weight: bold;
+    background-color: #fafafa;
+}
+
+.size-chart-table td:first-child {
+    font-weight: bold;
+}
+
+.size-chart-table th:hover,
+.size-chart-table td:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* ============================
+   PREORDER BANNER
+   ============================ */
+.preorder-banner-link {
+    text-decoration: none;
+    display: block;
+}
+
+.preorder-banner {
+    background-color: #0b2545;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 12px 0;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    max-width: 375px;
+}
+
+.preorder-banner strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.preorder-banner span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.preorder-banner:hover {
+    background-color: #143b63;
+    cursor: pointer;
+}
+
+.preorder-banner:active {
+    transform: scale(0.98);
+}
+
+
+/* ============================
+   SEARCH PAGE LAYOUT
+   ============================ */
+section.white .container.wide {
+    max-width: 100% !important;
+}
+
+section.white #SearchFilterArea {
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================
+   PRODUCT DETAIL IMAGE SLIDER
+   ============================ */
+.product-single .image-slider {
+    width: 100%;
+}
+
+.product-single .image-slider .flex-viewport ul.slides li {
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.product-single .image-slider .flex-viewport ul.slides li img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.product-single .flex-control-nav.flex-control-thumbs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.product-single .flex-control-nav.flex-control-thumbs li {
+    width: 100px !important;
+    height: 100px !important;
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+}
+
+.product-single .flex-control-nav.flex-control-thumbs li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.product-single .flex-control-nav.flex-control-thumbs li img:hover {
+    transform: scale(1.03);
+    border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .product-single .image-slider .flex-viewport ul.slides li img {
+        max-height: 90vh !important;
+    }
+
+    .product-single .flex-control-nav.flex-control-thumbs li {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+
+
+/* ============================
+   SEARCH TEXT COLORS
+   ============================ */
+.searchFor {
+    color: rgb(37, 37, 37) !important;
+}
+
+.searchFor::placeholder {
+    color: rgb(120, 120, 120) !important;
+}
+
+#Suggestions .linker a {
+    color: rgb(37, 37, 37) !important;
+    text-decoration: none;
+}
+
+#Suggestions .linker a:hover {
+    color: rgb(20, 20, 20) !important;
+    text-decoration: underline;
+}
+
